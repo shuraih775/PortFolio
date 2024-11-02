@@ -36,18 +36,15 @@ const Contact = () => {
       </motion.h2>
 
       <div className="flex flex-col md:flex-row max-w-6xl  mx-auto items-center relative">
-      <MdPushPin className='absolute top-5 left-[-22px] text-red-600' style={{ fontSize: '25px', zIndex: 10 }} />
+      <MdPushPin className='absolute top-5 left-2 text-red-600' style={{ fontSize: '25px', zIndex: 10 }} />
 
 
       <motion.div
-          className="hidden md:block md:w-1/3 h-full p-12 bg-blue-50 dark:bg-gray-900 rounded-lg shadow-5xl text-left"
+          className="hidden md:block md:w-1/3 sm:left-10 absolute top-0 left-0 h-full p-12 bg-blue-50 dark:bg-gray-900 rounded-lg shadow-5xl text-left"
           initial={{ rotate: -4, x: -20 }}
           animate={{ rotate: [0, -2, 2, 0] }}
           transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
           style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
             transformOrigin: "top left",
             marginLeft: "-20px",  
           }}

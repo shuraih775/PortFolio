@@ -31,13 +31,13 @@ const Education = () => {
         <h2 className="text-3xl font-extrabold text-gray-800 dark:text-gray-100 mb-8">Education</h2>
         <FaGraduationCap className="dark:text-white text-gray-800 text-2xl" />
       </div>
-      <div className=" w-2/4 mx-auto bg-white dark:bg-gray-800 pb-6 shadow-lg rounded-2xl">
+      <div className=" w-2/4 sm:w-2/3 xs:w-full mx-auto bg-white dark:bg-gray-800 pb-6 shadow-lg rounded-2xl">
         <div className="flex items-center mb-6"></div>
         <div className="relative">
           
           <div
           style={{'left':'4.4rem'}}
-            className={`absolute top-6 bottom-5 mb-10 w-1 rounded-md bg-gray-500 h-[88%]`}
+            className={`absolute top-6 bottom-5 md:left-3 mb-10 w-1 rounded-md bg-gray-500 h-[88%]`}
           ></div>
           <div  className="absolute left-16 top-5 w-4 h-4 bg-teal-500 rounded-full animate-inside-out"></div>
           <div style={{'top':'9.5rem'}} className="absolute left-16  w-4 h-4 bg-teal-500 rounded-full"></div>
