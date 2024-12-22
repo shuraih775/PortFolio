@@ -26,24 +26,26 @@ const Education = () => {
   // }, []);
 
   return (
-    <section id="education" className="py-10 bg-gray-100 text-center pl-20 pr-20 shadow-lg dark:bg-gray-900">
-      <div className="flex text-center align-center justify-center mr-auto ml-auto">
+    <section id="education" className="py-10 bg-gray-100 text-center  shadow-lg dark:bg-gray-900">
+      <div className="flex text-center align-center justify-center ">
         <h2 className="text-3xl font-extrabold text-gray-800 dark:text-gray-100 mb-8">Education</h2>
         <FaGraduationCap className="dark:text-white text-gray-800 text-2xl" />
       </div>
-      <div className=" w-2/4 sm:w-2/3 xs:w-full mx-auto bg-white dark:bg-gray-800 pb-6 shadow-lg rounded-2xl">
+      <div className=" w-[95%]  md:w-2/3 xs:w-full mx-auto bg-white dark:bg-gray-800 pb-6 shadow-lg rounded-2xl">
         <div className="flex items-center mb-6"></div>
         <div className="relative">
           
           <div
-          style={{'left':'4.4rem'}}
-            className={`absolute top-6 bottom-5 md:left-3 mb-10 w-1 rounded-md bg-gray-500 h-[88%]`}
+          
+            className={`absolute top-6 bottom-5 md:left-3 mb-10 w-1 rounded-md bg-gray-500 h-[88%] progress`}
           ></div>
-          <div  className="absolute left-16 top-5 w-4 h-4 bg-teal-500 rounded-full animate-inside-out"></div>
-          <div style={{'top':'9.5rem'}} className="absolute left-16  w-4 h-4 bg-teal-500 rounded-full"></div>
+
+
+          <div  className="absolute left-2 md:left-16 top-5 w-4 h-4 bg-teal-500 rounded-full animate-inside-out "></div>
+          <div className="absolute left-2 md:left-16 w-4 h-4 bg-teal-500 rounded-full progress-point"></div>
           {education.map((edu, index) => (
             <div key={index} className="relative pb-4 pt-4 "> {/*border-b border-gray-300*/}
-              <h3 className="text-xl font-semibold text-teal-400">{edu.degree}</h3>
+              <h3 className="text-xl  font-semibold text-teal-400">{edu.degree}</h3>
               <p className="text-sm text-gray-500 dark:text-gray-300">{edu.grade}</p>
               <p className="text-gray-400">{edu.institution}</p>
               <p className="text-gray-500">{edu.duration}</p>
@@ -63,6 +65,22 @@ const Education = () => {
         .animate-inside-out {
           animation: inside-out 2s infinite ease-in-out;
         }
+          @media (min-width: 950px) {
+            .progress {
+              margin-left: 4.4rem !important;
+            }
+              .progress-point{
+              top:9.5rem;}
+            
+          }
+          @media (max-width: 950px) {
+            .progress {
+              margin-left: .9rem !important;
+            }
+            .progress-point{
+            top:11rem}
+            
+          }
       `}</style>
     </section>
   );

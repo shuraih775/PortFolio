@@ -28,6 +28,13 @@ const projects = [
     link: 'https://github.com/shuraih775/Fast-Style-Transfer',
     technologies: ['Python', 'TensorFlow', 'Deep Learning'],
   },
+  {
+    title: 'Microservice Architecture',
+    description: 'Developed a scalable microservices architecture in Go with REST, gRPC, and Kafka for communication, and JWT for secure access. Integrated Spring Boot and middleware for enhanced reliability and fault tolerance.',
+    link: 'https://github.com/shuraih775/microservice-architecture',
+    technologies: ['Go', 'Kafka', 'REST', 'gRPC', 'JWT', 'Spring Boot', 'JMS']
+}
+
 ];
 
 const Projects = () => {

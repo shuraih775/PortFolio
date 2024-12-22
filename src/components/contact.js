@@ -24,7 +24,28 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-r from-blue-100 to-blue-50 dark:from-gray-900 dark:to-gray-800 text-center px-4">
+    <>
+    <style>
+        {`
+          @media (min-width: 950px) {
+            .custom-form {
+              margin-left: 35rem !important;
+            }
+            .custom-hang{
+              display:block;
+            }
+          }
+          @media (max-width: 950px) {
+            .custom-form {
+              margin-left: 0 !important;
+            }
+            .custom-hang{
+              display:none;
+            }
+          }
+        `}
+      </style>
+    <section id="contact" className="py-20 w-full bg-gradient-to-r from-blue-100 to-blue-50 dark:from-gray-900 dark:to-gray-800 text-center px-4">
       
       <motion.h2 
         className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-10 mr-auto ml-auto"
@@ -35,12 +56,12 @@ const Contact = () => {
         Contact Me
       </motion.h2>
 
-      <div className="flex flex-col md:flex-row max-w-6xl  mx-auto items-center relative">
-      <MdPushPin className='absolute top-5 left-2 text-red-600' style={{ fontSize: '25px', zIndex: 10 }} />
+      <div className="flex flex-col md:flex-row max-w-6xl  mx-auto  relative">
+      <MdPushPin className='absolute top-5 left-2 text-red-600 custom-hang' style={{ fontSize: '25px', zIndex: 10 }} />
 
 
       <motion.div
-          className="hidden md:block md:w-1/3 sm:left-10 absolute top-0 left-0 h-full p-12 bg-blue-50 dark:bg-gray-900 rounded-lg shadow-5xl text-left"
+          className="custom-hang md:w-1/3 sm:left-10 absolute top-0 left-0 h-full p-12 bg-blue-50 dark:bg-gray-900 rounded-lg shadow-5xl text-left"
           initial={{ rotate: -4, x: -20 }}
           animate={{ rotate: [0, -2, 2, 0] }}
           transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
@@ -54,8 +75,11 @@ const Contact = () => {
           </p>
         </motion.div>
         
-        <form onSubmit={handleSubmit} style={{'marginLeft':'30rem'}} className="flex-grow md:w-1/4 mt-8  md:mt-0 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
-          <div className="space-y-6">
+         <form
+          onSubmit={handleSubmit}
+          className="w-full  bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg flex-grow md:w-1/4 lg:ml-[35%] md:ml-[35%] custom-form"
+          
+        >  <div className="space-y-6">
             <input 
               type="text" 
               id="from_name" 
@@ -90,7 +114,7 @@ const Contact = () => {
           </div>
         </form>
       </div>
-    </section>
+    </section></>
   );
 };
 
