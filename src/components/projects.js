@@ -7,13 +7,13 @@ const projects = [
   {
     title: 'Reverie Facade',
     description: 'Launched an AI-powered app for managing maladaptive daydreaming with features for day planning, emotional trigger analysis, and personalized tips to boost productivity and well-being.',
-    link: 'https://github.com/shuraih775/ReverieFacade',
+    link: 'https://github.com/shuraih775/The-ReverieFacade-App',
     technologies: ['React Native','Express', 'MongoDB'],
   },
   {
     title: 'College BookMart',
     description: 'Developed a website to manage bookstore operations, reducing crowding and improving inventory management, revenue tracking, and automated printing services.',
-    link: 'https://github.com/shuraih775/College-Bookstore',
+    link: 'https://github.com/shuraih775/College-Bookmart',
     technologies: ['MERN Stack', 'QZ Tray', 'RazorPay API'],
   },
   {
@@ -28,12 +28,12 @@ const projects = [
     link: 'https://github.com/shuraih775/Fast-Style-Transfer',
     technologies: ['Python', 'TensorFlow', 'Deep Learning'],
   },
-  {
-    title: 'Microservice Architecture',
-    description: 'Developed a scalable microservices architecture in Go with REST, gRPC, and Kafka for communication, and JWT for secure access. Integrated Spring Boot and middleware for enhanced reliability and fault tolerance.',
-    link: 'https://github.com/shuraih775/microservice-architecture',
-    technologies: ['Go', 'Kafka', 'REST', 'gRPC', 'JWT', 'Spring Boot', 'JMS']
-}
+//   {
+//     title: 'Microservice Architecture',
+//     description: 'Developed a scalable microservices architecture in Go with REST, gRPC, and Kafka for communication, and JWT for secure access. Integrated Spring Boot and middleware for enhanced reliability and fault tolerance.',
+//     link: 'https://github.com/shuraih775/microservice-architecture',
+//     technologies: ['Go', 'Kafka', 'REST', 'gRPC', 'JWT', 'Spring Boot', 'JMS']
+// }
 
 ];
 

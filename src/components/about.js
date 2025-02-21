@@ -60,9 +60,9 @@ const About = () => {
         </motion.p>
 
         <motion.a
-          href="https://drive.google.com/file/d/1DhmJl0u43QK1wuyywq4oA_Cb6kk7hs1j/view?usp=sharing"
+          href="https://drive.google.com/file/d/1u85pXwWKTvNj4VVj6R1C-HLLfbDkZis8/view?usp=sharing"
           download
-          className="mt-8 inline-block px-6 py-3 bg-black dark:bg-gray-300 dark:text-black text-white rounded-lg hover:bg-gray-800 dark:hover:bg-black transition"
+          className="mt-8 inline-block px-6 py-3 bg-black dark:bg-gray-300 dark:text-black text-white rounded-lg hover:bg-gray-800 dark:hover:text-gray-100 dark:hover:bg-black transition"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.8 }}

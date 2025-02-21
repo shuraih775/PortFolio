@@ -37,7 +37,7 @@ const Education = () => {
           
           <div
           
-            className={`absolute top-6 bottom-5 md:left-3 mb-10 w-1 rounded-md bg-gray-500 h-[88%] progress`}
+            className={`absolute top-6 bottom-5 md:left-[.5] mb-10 w-1 rounded-md bg-gray-500 h-[88%] progress`}
           ></div>
 
 
@@ -45,10 +45,10 @@ const Education = () => {
           <div className="absolute left-2 md:left-16 w-4 h-4 bg-teal-500 rounded-full progress-point"></div>
           {education.map((edu, index) => (
             <div key={index} className="relative pb-4 pt-4 "> {/*border-b border-gray-300*/}
-              <h3 className="text-xl  font-semibold text-teal-400">{edu.degree}</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-300">{edu.grade}</p>
-              <p className="text-gray-400">{edu.institution}</p>
-              <p className="text-gray-500">{edu.duration}</p>
+              <h3 className="text-xl pl-4 font-semibold text-teal-400">{edu.degree}</h3>
+              <p className="text-sm text-gray-500 pl-4 dark:text-gray-300">{edu.grade}</p>
+              <p className="text-gray-400 pl-4">{edu.institution}</p>
+              <p className="text-gray-500 pl-4">{edu.duration}</p>
             </div>
           ))}
         </div>
