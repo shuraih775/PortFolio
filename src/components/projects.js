@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaExternalLinkAlt } from 'react-icons/fa';
@@ -8,7 +7,19 @@ const projects = [
     title: 'Reverie Facade',
     description: 'Launched an AI-powered app for managing maladaptive daydreaming with features for day planning, emotional trigger analysis, and personalized tips to boost productivity and well-being.',
     link: 'https://github.com/shuraih775/The-ReverieFacade-App',
-    technologies: ['React Native','Express', 'MongoDB'],
+    technologies: ['React Native', 'Express', 'MongoDB'],
+  },
+  {
+    title: 'StudyCollab',
+    description: 'Built a real-time study collaboration platform with WebSocket-based messaging, secure file sharing via MinIO, and containerized microservices.',
+    link: 'https://github.com/shuraih775/Study-Colab',
+    technologies: ['Go', 'Spring Boot', 'PostgreSQL', 'MinIO', 'Docker', 'Next.js'],
+  },
+  {
+    title: 'Cypher',
+    description: 'Built a distributed Go crawler using goroutines and Redis locking, with ML-based domain classification and stylometry-driven clustering for writing-pattern analysis.',
+    // link: 'https://github.com/shuraih775',
+    technologies: ['Go', 'Redis', 'XLM-R', 'DarkBERT'],
   },
   {
     title: 'College BookMart',
@@ -24,17 +35,12 @@ const projects = [
   },
   {
     title: 'Fast Style Transfer',
-    description: 'Implemented "Texture Networks" research to enable real-time texture synthesis and image stylization using deep neural networks, transforming images into artistic textures.',
+    description: 'Implemented Texture Networks to enable real-time image stylization using deep neural networks.',
     link: 'https://github.com/shuraih775/Fast-Style-Transfer',
     technologies: ['Python', 'TensorFlow', 'Deep Learning'],
   },
-//   {
-//     title: 'Microservice Architecture',
-//     description: 'Developed a scalable microservices architecture in Go with REST, gRPC, and Kafka for communication, and JWT for secure access. Integrated Spring Boot and middleware for enhanced reliability and fault tolerance.',
-//     link: 'https://github.com/shuraih775/microservice-architecture',
-//     technologies: ['Go', 'Kafka', 'REST', 'gRPC', 'JWT', 'Spring Boot', 'JMS']
-// }
-
+  
+  
 ];
 
 const Projects = () => {
@@ -43,8 +49,8 @@ const Projects = () => {
       <h2 className="text-4xl font-extrabold text-center text-gray-800 dark:text-gray-100 mb-12">Projects</h2>
       <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4">
         {projects.map((project, index) => (
-          <motion.div 
-            key={project.title} 
+          <motion.div
+            key={project.title}
             className="p-6 border dark:border-gray-700 rounded-2xl shadow-xl bg-white dark:bg-gray-900 hover:shadow-2xl transform hover:scale-105 transition-transform duration-300 flex flex-col justify-between"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -61,14 +67,16 @@ const Projects = () => {
                 ))}
               </div>
             </div>
-            <a 
-              href={project.link} 
-              target="_blank" 
+            {
+              project.link && <a
+              href={project.link}
+              target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-500 font-medium"
             >
               View Project <FaExternalLinkAlt className="ml-2" />
             </a>
+            }
           </motion.div>
         ))}
       </div>
